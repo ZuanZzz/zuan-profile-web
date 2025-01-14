@@ -1,5 +1,3 @@
-
-
 body .shell-top {
   width: 100%;
   height: 100vh;
@@ -132,6 +130,11 @@ body .shell-main-nav ul li a {
   height: 100%;
   line-height: 60px;
   text-align: center;
+  transition: color 0.3s ease;
+}
+
+body .shell-main-nav ul li a:hover {
+  color: #48afa5;
 }
 
 body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
@@ -633,6 +636,7 @@ body .shell-main-image-img {
 
 body .shell-main-image-img img {
   position: absolute;
+  transition: opacity 0.3s ease;
 }
 
 body .shell-main-image-img img:nth-child(1) {
@@ -656,7 +660,9 @@ body .shell-main-image-img img:nth-child(3) {
   right: 0;
 }
 
-
+body .shell-main-image-img img.loading {
+  opacity: 0.5;
+}
 
 @media (max-width:768px) {
   body .shell-main::after {
@@ -804,4 +810,26 @@ body .shell-main-image-img img:nth-child(3) {
   body .shell-main-bottom {
     margin: 0;
   }
+}
+
+@media (max-width: 1024px) {
+    body .shell-main-bottom ul li {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    body .shell-top .word {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    body .shell-top .word h2 {
+        font-size: 40px;
+    }
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }

@@ -19,7 +19,7 @@
         }
 
         body {
-            background-color: rgb(248, 248, 248);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -37,10 +37,12 @@
             max-width: 1430px;
             overflow-x: hidden;
             transform: translateY(0px);
-            background-color: #fff;
+            background: rgba(255, 255, 255, 0.95);
             transition: .3s;
             padding: 50px;
-            border: 1px solid #000;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .img {
@@ -56,21 +58,32 @@
 
         .img::after {
             content: 'ZUANZUAN';
-            width: 500px;
-            height: 200px;
+            width: 600px;
+            height: 250px;
             border-radius: 3px;
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            border: #fff 10px solid;
+            border: rgba(255, 255, 255, 0.3) 10px solid;
             color: #fff;
             letter-spacing: 30px;
             font: 100 70px 'font';
             display: flex;
             align-items: center;
             justify-content: center;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
 
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(255,255,255,0.6);
+            }
         }
 
         /* -------------------------------------- */
@@ -81,6 +94,8 @@
             display: flex;
             justify-content: space-evenly;
             margin-top: 50px;
+            position: relative;
+            z-index: 1;
         }
 
         .section-top-middle {
@@ -91,7 +106,14 @@
             background-size: cover;
             background-position-y: -30px;
             margin: 0 50px;
-            border: 15px solid rgba(0, 0, 0, 0.151);
+            border: 15px solid rgba(102, 205, 170, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-top-middle:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         .section-top-left,
@@ -100,16 +122,25 @@
             height: 300px;
             font-size: 22px;
             margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
         }
 
-        .section-top-left {
-            text-align: right;
+        .section-top-left:hover,
+        .section-top-right:hover {
+            transform: translateY(-5px);
         }
 
         .section-top p {
             font-size: 26px;
-            color: #dc6396;
+            background: linear-gradient(45deg, #dc6396, #66cdaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin: 5px 0;
+            font-weight: bold;
         }
 
         .section-middle,
@@ -167,12 +198,22 @@
         }
 
         .Skills li {
-            width: 50%;
+            width: calc(50% - 20px);
             display: flex;
             justify-content: space-evenly;
-            margin: 20px 0;
+            margin: 20px 10px;
             height: 50px;
             cursor: pointer;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .Skills li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .Skills li span,
@@ -227,10 +268,13 @@
             margin-left: 20px;
             margin-bottom: 20px;
             transition: .3s;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .Achievement-right img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         article {
