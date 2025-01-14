@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-image: url("./image/background.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: repeat;
+		}
+
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 300px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 0;
+			color: #333;
+		}
+
+		form {
+			width: 100%;
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #555;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			align-self: center;
+		}
+
+		button:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Leave a message</h1>
+
+		<form id="my-form" action="#" method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" rows="4" required></textarea>
+
+			<a href="./Thanks.html">
+				<button type="submit">Submit</button>
+			</a>
+			
+		</form>
+	</div>
+<script>
+		// 获取表单对象
+		var form = document.getElementById("my-form");
+
+		// 添加提交事件监听器
+		form.addEventListener("submit", function(event) {
+			event.preventDefault(); // 阻止表单默认提交行为
+
+			// 获取表单数据
+			var name = form.elements["name"].value;
+			var email = form.elements["email"].value;
+			var message = form.elements["message"].value;
+
+			// 构造 URL
+			var url = "Thanks.html" 
+					+ "?name=" + encodeURIComponent(name)
+					+ "&email=" + encodeURIComponent(email)
+					+ "&message=" + encodeURIComponent(message);
+
+			// 重定向到 Thanks.html
+			window.location.href = url;
+		});
+	</script>
+</body>
+</html>
