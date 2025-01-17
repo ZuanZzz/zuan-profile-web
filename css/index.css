@@ -1,178 +1,186 @@
 body .shell-top {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgb(24, 16, 61), rgb(31, 16, 25));
-  position: absolute;
-  transition: .2s;
-  overflow: hidden;
+    width: 100%; /* 宽度为100% */
+    height: 100vh; /* 高度为视口高度的100% */
+    background-image: linear-gradient(to bottom, rgb(24, 16, 61), rgb(31, 16, 25)); /* 设置背景图像为从rgb(24, 16, 61)到rgb(31, 16, 25)的线性渐变 */
+    position: absolute; /* 绝对定位 */
+    transition: .2s; /* 过渡效果持续时间为0.2秒 */
+    overflow: hidden; /* 隐藏超出容器的内容 */
 }
 
 body .shell-top video {
-  width: 100%;
+    width: 100%; /* 宽度为100% */
 }
 
 body .shell-top .word {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 220px;
-  border: solid 10px rgba(255, 255, 255, 0.199);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    position: absolute; /* 绝对定位 */
+    left: 50%; /* 距离包含块左侧50% */
+    top: 50%; /* 距离包含块顶部50% */
+    transform: translate(-50%, -50%); /* 将元素沿X、Y轴分别平移-50%，使其居中 */
+    width: 700px; /* 宽度为700像素 */
+    height: 220px; /* 高度为220像素 */
+    border: solid 10px rgba(255, 255, 255, 0.199); /* 设置边框为10像素宽的半透明白色实线 */
+    display: flex; /* 定义弹性盒布局容器 */
+    justify-content: center; /* 在主轴方向上居中对齐内容 */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    flex-direction: column; /* 弹性盒主轴方向设为纵轴（垂直方向） */
 }
 
 body .shell-top .word h2 {
-  font: 100 70px 'font';
-  color: #fff;
-  letter-spacing: 10px;
+    font: 100 70px 'font'; /* 字体样式为：100字重、70像素大小、字体家族为 'font' */
+    color: #fff; /* 字体颜色为白色 */
+    letter-spacing: 10px; /* 字母间距为10像素 */
+}
+
+body .shell-top .word h3 {
+    /* 字体样式为：100字重、70像素大小、字体家族为 'font' */
+    color: rgb(255, 255, 255,0.8); /* 字体颜色为黑色 */
+    /* 字母间距为10像素 */
 }
 
 body .shell-main {
-  width: 100%;
-  height: auto;
-  top: 100vh;
-  position: relative;
-  transition: .2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 100px;
+    width: 100%; /* 宽度为100% */
+    height: auto; /* 高度自动调整 */
+    top: 100vh; /* 距离包含块顶部视口高度的100% */
+    position: relative; /* 相对定位 */
+    transition: .2s; /* 过渡效果持续时间为0.2秒 */
+    display: flex; /* 定义弹性盒布局容器 */
+    flex-direction: column; /* 弹性盒主轴方向设为纵轴（垂直方向） */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    margin-bottom: 100px; /* 下外边距为100像素 */
 }
 
 body .shell-main::before {
-  content: '';
-  width: 250px;
-  height: 50%;
-  background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff);
-  position: absolute;
-  transform: translate(-145%, 0);
-  z-index: -999;
-  bottom: 0;
+    content: ''; /* 伪元素内容为空 */
+    width: 250px; /* 宽度为250像素 */
+    height: 50%; /* 高度为50% */
+    background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff); /* 背景图像为从#a1e6ff到#a8ffe2到#a1e6ff的线性渐变 */
+    position: absolute; /* 绝对定位 */
+    transform: translate(-145%, 0); /* 在X轴上平移-145% */
+    z-index: -999; /* 堆叠顺序设为-999，置于所有其他内容之后 */
+    bottom: 0; /* 距离包含块底部0 */
 }
 
 body .shell-main::after {
-  content: '';
-  width: 250px;
-  height: 50%;
-  background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff);
-  position: absolute;
-  transform: translate(145%);
-  z-index: -999;
+    content: ''; /* 伪元素内容为空 */
+    width: 250px; /* 宽度为250像素 */
+    height: 50%; /* 高度为50% */
+    background-image: linear-gradient(to bottom, #a1e6ff, #a8ffe2, #a1e6ff); /* 背景图像为从#a1e6ff到#a8ffe2到#a1e6ff的线性渐变 */
+    position: absolute; /* 绝对定位 */
+    transform: translate(145%); /* 在X轴上平移145% */
+    z-index: -999; /* 堆叠顺序设为-999，置于所有其他内容之后 */
 }
 
 body .shell-main-nav {
-  width: 100%;
-  height: 60px;
-  position: sticky;
-  z-index: 999;
-  top: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 18vh;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
-  backdrop-filter: blur(13px);
+    width: 100%; /* 宽度为100% */
+    height: 60px; /* 高度为60像素 */
+    position: sticky; /* 粘性定位 */
+    z-index: 999; /* 堆叠顺序设为999 */
+    top: 0; /* 距离包含块顶部0 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影效果 */
+    margin-bottom: 18vh; /* 下外边距为视口高度的18% */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)); /* 背景图像为从右下角方向的线性渐变，颜色从rgba(255, 255, 255, 0.8)到rgba(255, 255, 255, 0.7)到rgba(255, 255, 255, 0.6) */
+    backdrop-filter: blur(13px); /* 设置背景区域的模糊效果，模糊半径为13像素 */
 }
 
 body .shell-main-nav .logo {
-  width: 220px;
-  height: 100%;
-  position: absolute;
-  left: 5%;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
+    width: 220px; /* 宽度为220像素 */
+    height: 100%; /* 高度为100% */
+    position: absolute; /* 绝对定位 */
+    left: 5%; /* 距离包含块左侧5% */
+    display: flex; /* 定义弹性盒布局容器 */
+    justify-content: space-between; /* 在主轴方向上均匀分配空间 */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
 }
 
 body .shell-main-nav .logo img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+    width: 45px; /* 宽度为45像素 */
+    height: 45px; /* 高度为45像素 */
+    border-radius: 50%; /* 设置边框圆角半径为50%，使其成为一个圆形 */
 }
 
 body .shell-main-nav .logo span {
-  font: 100 22px 'font';
-  letter-spacing: 2px;
+    font: 100 22px 'font'; /* 字体样式为：100字重、22像素大小、字体家族为 'font' */
+    letter-spacing: 2px; /* 字母间距为2像素 */
 }
 
 body .shell-main-nav ul {
-  width: 600px;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: absolute;
-  right: 5%;
+width: 600px; /* 宽度为600像素 */
+height: 100%; /* 高度为100% */
+display: flex; /* 定义弹性盒布局容器 */
+justify-content: space-evenly; /* 在主轴方向上均匀分布弹性元素 */
+align-items: center; /* 在交叉轴方向上居中对齐内容 */
+position: absolute; /* 绝对定位 */
+right: 5%; /* 距离包含块右侧5% */
 }
 
 body .shell-main-nav ul .nav-box {
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  width: 115px;
-  height: 5px;
-  border-radius: 2px;
-  z-index: -999;
-  transition: .5s;
+    position: absolute; /* 绝对定位 */
+    bottom: 1px; /* 距离底部1像素 */
+    left: 0; /* 距离左侧0 */
+    width: 115px; /* 宽度为115像素 */
+    height: 5px; /* 高度为5像素 */
+    border-radius: 2px; /* 设置边框圆角半径为2像素 */
+    z-index: -999; /* 堆叠顺序设为-999，置于所有其他内容之后 */
+    transition: .5s; /* 过渡效果持续时间为0.5秒 */
 }
 
 body .shell-main-nav ul li {
-  width: 150px;
-  text-align: center;
+    width: 150px; /* 宽度为150像素 */
+    text-align: center; /* 文本居中对齐 */
 }
 
 body .shell-main-nav ul li a {
-  color: #000;
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 60px;
-  text-align: center;
-  transition: color 0.3s ease;
+    color: #000; /* 字体颜色为黑色 */
+    display: block; /* 设置为块级元素 */
+    width: 100%; /* 宽度为100% */
+    height: 100%; /* 高度为100% */
+    line-height: 60px; /* 行高为60像素 */
+    text-align: center; /* 文本居中对齐 */
+    transition: color 0.3s ease; /* 字体颜色的过渡效果，持续时间为0.3秒，平滑过渡 */
 }
 
-body .shell-main-nav ul li a:hover {
-  color: #48afa5;
+    body .shell-main-nav ul li a:hover {
+        color: #48afa5; /* 鼠标悬停时字体颜色变为#48afa5 */
+    }
+
+body .shell-main-nav ul li:nth-child(2):hover ~ .nav-box {
+    left: 120px; /* 鼠标悬停在第二个列表项时，nav-box向右移动120像素 */
+    background-color: red; /* 背景颜色变为红色 */
 }
 
-body .shell-main-nav ul li:nth-child(2):hover~.nav-box {
-  left: 120px;
-  background-color: red;
+body .shell-main-nav ul li:nth-child(3):hover ~ .nav-box {
+    left: 240px; /* 鼠标悬停在第三个列表项时，nav-box向右移动240像素 */
+    background-color: #8da1f8; /* 背景颜色变为#8da1f8 */
 }
 
-body .shell-main-nav ul li:nth-child(3):hover~.nav-box {
-  left: 240px;
-  background-color: #8da1f8;
+body .shell-main-nav ul li:nth-child(4):hover ~ .nav-box {
+    left: 360px; /* 鼠标悬停在第四个列表项时，nav-box向右移动360像素 */
+    background-color: #ffb1b1; /* 背景颜色变为#ffb1b1 */
 }
 
-body .shell-main-nav ul li:nth-child(4):hover~.nav-box {
-  left: 360px;
-  background-color: #ffb1b1;
+body .shell-main-nav ul li:nth-child(5):hover ~ .nav-box {
+    left: 480px; /* 鼠标悬停在第五个列表项时，nav-box向右移动480像素 */
+    background-color: #7df88e; /* 背景颜色变为#7df88e */
 }
 
-body .shell-main-nav ul li:nth-child(5):hover~.nav-box {
-  left: 480px;
-  background-color: #7df88e;
-}
 
 body .shell-main-lbt {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 650px;
-  background-color: #978989;
-  margin-bottom: 150px;
-  overflow: hidden;
-  background-image: url("../image/lbt.gif");
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50%;
+    position: relative; /* 相对定位 */
+    width: 100%; /* 宽度为100% */
+    display: flex; /* 定义弹性盒布局容器 */
+    justify-content: center; /* 在主轴方向上居中对齐内容 */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    height: 650px; /* 高度为650像素 */
+    background-color: #978989; /* 背景颜色为#978989 */
+    margin-bottom: 150px; /* 下外边距为150像素 */
+    overflow: hidden; /* 隐藏超出容器的内容 */
+    background-image: url("../image/lbt.gif"); /* 背景图像路径为"../image/lbt.gif" */
+    background-color: #fff; /* 小蜘蛛背景，背景颜色为白色 */
+    background-repeat: no-repeat; /* 背景图像不重复 */
+    background-size: contain; /* 背景图像按原始大小显示 */
+    background-position: 50%; /* 背景图像居中对齐 */
 }
+
 
 body .shell-main-lbt .images {
   width: 300%;
@@ -241,14 +249,15 @@ body .shell-main-lbt .button {
   user-select: none;
 }
 
-body .shell-main-lbt .button .button-left,
-body .shell-main-lbt .button .button-right {
-  font-size: 50px;
-  background-color: rgba(160, 193, 255, 0.7);
-  padding: 0 20px;
-  cursor: pointer;
-  line-height: 500px;
-}
+    body .shell-main-lbt .button .button-left,
+    body .shell-main-lbt .button .button-right {
+        font-size: 50px;
+        /*background-color: rgba(160, 193, 255, 0.7);*/
+        background-color: rgba(160, 193, 255, 0);
+        padding: 0 20px;
+        cursor: pointer;
+        line-height: 500px;
+    }
 
 body .shell-main-header {
   width: 90%;
@@ -263,40 +272,41 @@ body .shell-main-header {
 }
 
 body .shell-main-header-left {
-  width: 60%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 0 15px rgba(95, 95, 95, 0.5);
-  background-color: white;
-  overflow: hidden;
+    width: 60%; /* 宽度为60% */
+    height: 90%; /* 高度为90% */
+    display: flex; /* 定义弹性盒布局容器 */
+    justify-content: center; /* 在主轴方向上居中对齐内容 */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    flex-direction: column; /* 弹性盒主轴方向设为纵轴（垂直方向） */
+    box-shadow: 0 0 15px rgba(95, 95, 95, 0.5); /* 阴影效果 */
+    background-color: white; /* 背景颜色为白色 */
+    overflow: hidden; /* 隐藏超出容器的内容 */
 }
 
 body .shell-main-header-left::after {
-  content: '';
-  width: 200px;
-  height: 15px;
-  background-color: #8ddff8;
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
+    content: ''; /* 伪元素内容为空 */
+    width: 200px; /* 宽度为200像素 */
+    height: 15px; /* 高度为15像素 */
+    background-color: #8ddff8; /* 背景颜色为#8ddff8 */
+    opacity: 0.8; /* 透明度为0.8 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 距离顶部0 */
+    left: 0; /* 距离左侧0 */
 }
 
 body .shell-main-header-left::before {
-  content: '';
-  width: 250px;
-  height: 250px;
-  border: 20px solid rgba(0, 255, 255, 0.3);
-  position: absolute;
-  bottom: -30px;
-  left: -140px;
-  border-radius: 10px;
-  transform: rotate(30deg);
-  animation: transform 4s infinite;
+    content: ''; /* 伪元素内容为空 */
+    width: 250px; /* 宽度为250像素 */
+    height: 250px; /* 高度为250像素 */
+    border: 20px solid rgba(0, 255, 255, 0.3); /* 边框为20像素宽的半透明青色实线 */
+    position: absolute; /* 绝对定位 */
+    bottom: -30px; /* 距离底部-30像素 */
+    left: -140px; /* 距离左侧-140像素 */
+    border-radius: 10px; /* 边框圆角半径为10像素 */
+    transform: rotate(30deg); /* 将元素旋转30度 */
+    animation: transform 4s infinite; /* 应用名为transform的动画，持续时间为4秒，循环无限次 */
 }
+
 
 @keyframes transform {
   0% {
@@ -313,59 +323,65 @@ body .shell-main-header-left::before {
 }
 
 body .shell-main-header-left-footer {
-  position: relative;
-  width: 80%;
-  margin-top: 40px;
-  transform: translateY(400px);
-  opacity: 0;
-  transition: .9s;
-  transition-delay: .3s;
+    position: relative; /* 设置相对定位 */
+    width: 80%; /* 宽度为父元素的80% */
+    margin-top: 0px; /* 上外边距为40像素 */
+    transform: translateY(0px); /* 在垂直方向平移400像素 */
+    opacity: 100; /* 透明度为0（完全透明） */
+    transition: .9s; /* 过渡效果的持续时间为0.9秒 */
+    transition-delay: .3s; /* 过渡效果的延迟时间为0.3秒 */
 }
 
 body .shell-main-header-left-footer p {
-  position: absolute;
-  display: block;
-  right: 0;
+    position: absolute; /* 设置绝对定位 */
+    display: block; /* 设置为块级元素 */
+    right: 0; /* 将元素定位到其包含块（父元素）的右侧 */
 }
 
+
 body .shell-main-header-left-top {
-  display: flex;
-  position: relative;
-  width: 85%;
-  transform: translateY(400px);
-  opacity: 0;
-  transition: .8s;
+    display: flex; /* 将元素设为弹性盒容器 */
+    position: relative; /* 设置相对定位 */
+    width: 85%; /* 宽度为父元素的85% */
+    transform: translateY(0px); /* 在垂直方向平移400像素 */
+    opacity: 100; /* 透明度为100（完全不透明） */
+    transition: .8s; /* 过渡效果的持续时间为0.8秒 */
 }
 
 body .shell-main-header-left-top h2 {
-  font-size: 100px;
-  transform: translateY(-20px);
+    font-size: 100px; /* 字体大小设为100像素 */
+    transform: translateY(-20px); /* 在垂直方向上向上平移20像素 */
 }
 
 body .shell-main-header-left-top span {
-  -webkit-text-fill-color: rgba(0, 0, 0, 0.2);
-  -webkit-text-stroke-color: #3aaf88;
-  -webkit-text-stroke-width: 1px;
-  margin-left: 20px;
-  font: 600 40px '';
+    -webkit-text-fill-color: #000; /* 设置文字填充色为半透明黑色 */
+    -webkit-text-stroke-color: #ff8a9f; /* 设置文字描边颜色为#3aaf88 */
+    -webkit-text-stroke-width: 1px; /* 设置文字描边宽度为1像素 */
+    margin-left: 20px; /* 左外边距为20像素 */
+    font: 600 40px ''; /* 字体设置为600字重、40像素大小的无衬线体 */
 }
 
 body .shell-main-header-left-bottom {
-  width: 85%;
-  height: auto;
-  transform: translateY(400px);
-  transition: .8s;
-  transition-delay: .2s;
-  font-size: 20px;
+    width: 85%; /* 宽度为父元素的85% */
+    height: auto; /* 高度自动调整 */
+    /*transform: translateY(300px); */ /* 在垂直方向平移400像素 */
+    transition: .8s; /* 过渡效果的持续时间为0.8秒 */
+    transition-delay: .2s; /* 过渡效果的延迟时间为0.2秒 */
+    font-size: 20px; /* 字体大小设为20像素 */
+}
+body .shell-main-header-left-bottom h2{
+    color:black;
+    font-size:10px;
 }
 
 body .shell-main-header-right {
-  width: 40%;
-  height: 95%;
-  background-size: cover;
-  background-image: url("../image/top.png");
-  border: 5px solid #000;
+    width: 40%; /* 宽度为父元素的40% */
+    height: 95%; /* 高度为父元素的95% */
+    background-size: cover; /* 背景图像大小调整以完全覆盖元素 */
+    background-image: url("../image/zuan04.jpg"); /* 背景图像设置为../image/top.png */
+    border: 5px solid #000; /* 边框设置为5像素宽的黑色实线 */
 }
+
 
 body .shell-main-content {
   display: flex;
@@ -469,12 +485,12 @@ body .shell-main-content-right img {
 }
 
 body .shell-main-bottom {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 510px;
-  flex-direction: column;
-  margin: 200px;
+    display: flex; /* 将元素设为弹性盒容器 */
+    justify-content: center; /* 在主轴方向上居中对齐内容 */
+    width: 100%; /* 宽度为100% */
+    height: 510px; /* 高度为510像素 */
+    flex-direction: column; /* 弹性盒的主轴方向为纵轴（垂直方向） */
+    margin: 200px; /* 外边距为200像素 */
 }
 
 body .shell-main-bottom h2 {
@@ -486,32 +502,36 @@ body .shell-main-bottom h2 {
 
 body .shell-main-bottom h2 span {
   font-size: 80px;
+  font-weight:100px;
+  font-style:normal;
   color: turquoise;
 }
 
 body .shell-main-bottom-bottom {
-  width: 100%;
-  height: auto;
-  padding: 20px 0 100px 0;
-  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
-  backdrop-filter: blur(30px);
-  position: relative;
+    width: 100%; /* 宽度为100% */
+    height: auto; /* 高度自动调整 */
+    padding: 20px 0 100px 0; /* 上内边距为20像素，下内边距为100像素，左和右内边距为0 */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)); /* 设置背景为从右下角方向的线性渐变，颜色从rgba(255, 255, 255, 0.9)渐变到rgba(255, 255, 255, 0.7)再到rgba(255, 255, 255, 0.6) */
+    backdrop-filter: blur(30px); /* 设置背景区域的模糊效果，模糊半径为30像素 */
+    position: relative; /* 设置相对定位 */
 }
 
+
 body .shell-main-bottom-bottom::before {
-  content: '';
-  width: 250px;
-  height: 250px;
-  border: 20px solid rgba(0, 255, 255, 0.3);
-  position: absolute;
-  border-radius: 10px;
-  right: 70px;
-  top: 100px;
-  transform: rotate(30deg) translate(-50%, -50%);
-  animation: transform 4s infinite;
-  opacity: 0.8;
-  z-index: -999;
+    content: ''; /* 伪元素内容为空 */
+    width: 250px; /* 宽度为250像素 */
+    height: 250px; /* 高度为250像素 */
+    border: 20px solid rgba(0, 255, 255, 0.3); /* 设置边框为20像素宽的半透明青色实线 */
+    position: absolute; /* 设置绝对定位 */
+    border-radius: 10px; /* 边框圆角半径为10像素 */
+    right: 70px; /* 将元素定位到距离其包含块（父元素）右侧70像素 */
+    top: 100px; /* 将元素定位到距离其包含块（父元素）顶部100像素 */
+    transform: rotate(30deg) translate(-50%, -50%); /* 将元素先旋转30度，再沿X、Y轴分别平移-50% */
+    animation: transform 4s infinite; /* 应用名为transform的动画，持续时间为4秒，循环无限次 */
+    opacity: 0.8; /* 透明度为0.8 */
+    z-index: -999; /* 设置元素的堆叠顺序为-999，使其处于所有其他内容的后面 */
 }
+
 
 @keyframes transform {
   0% {
@@ -549,11 +569,13 @@ body .shell-main-bottom-bottom ul li {
 }
 
 body .shell-main-bottom-bottom ul li span {
-  font-size: 10px;
+    font-style: normal;
+    font-size: 13px;
+    color: #525252;
 }
 
 body .shell-main-bottom-bottom ul li:hover {
-  padding: 2px;
+  padding: 10px;
   margin: 8px;
 }
 
@@ -575,9 +597,7 @@ body .shell-main-bottom-bottom ul li h2 {
   letter-spacing: 0;
 }
 
-body .shell-main-bottom-bottom ul li span {
-  color: #525252;
-}
+
 
 body .shell-main-image {
   width: 100%;
@@ -832,4 +852,49 @@ body .shell-main-image-img img.loading {
 /* Add smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Add About me*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.icons-container li {
+    margin: 0 60px;
+    position: relative;
+}
+
+.icons-container a {
+    display: block;
+    text-align: center;
+}
+
+.icons-container img {
+    width: 60px;
+    height: 60px;
+}
+
+.icons-container p {
+    margin: 20px 0 0;
+    display: none;
+}
+
+.icons-container li:hover p {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
 }

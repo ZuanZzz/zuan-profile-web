@@ -1,45 +1,49 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* 设置字符编码为 UTF-8 */
 
 @font-face {
-  font-family: 'font';
-  src: url("../font/优设标题黑_猫啃网.ttf");
+    font-family: 'font'; /* 定义字体家族名为 'font' */
+    src: url("../font/优设标题黑_猫啃网.ttf"); /* 字体来源路径 */
 }
 
+/* 重置所有元素的样式 */
 * {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  outline: none;
-  text-decoration: none;
+    padding: 0; /* 内边距为0 */
+    margin: 0; /* 外边距为0 */
+    list-style: none; /* 移除列表样式 */
+    outline: none; /* 移除轮廓 */
+    text-decoration: none; /* 移除文本装饰 */
 }
 
+/* 将 body 设置为弹性盒容器 */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+    display: flex; /* 定义弹性盒布局容器 */
+    justify-content: center; /* 在主轴方向上居中对齐内容 */
+    align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    background-color: white; /* 背景颜色为白色 */
 }
 
-body .shell {
-  width: 100%;
-  position: relative;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    /* shell 类样式 */
+    body .shell {
+        width: 100%; /* 宽度为100% */
+        position: relative; /* 设置相对定位 */
+        height: auto; /* 高度自动调整 */
+        display: flex; /* 定义弹性盒布局容器 */
+        flex-direction: column; /* 弹性盒主轴方向设为纵轴（垂直方向） */
+        align-items: center; /* 在交叉轴方向上居中对齐内容 */
+    }
 
-body .shell-main-footer {
-  width: 100%;
-  position: relative;
-  height: 100px;
-  transform: translateY(100px);
-  display: flex;
-  justify-content: center;
-  letter-spacing: 2px;
-  align-items: center;
-  text-align: center;
-  color: #323232;
-  font: 100 30px 'font';
-  background-color: #D692AF;
-}
+    /* shell-main-footer 类样式 */
+    body .shell-main-footer {
+        width: 100%; /* 宽度为100% */
+        position: relative; /* 设置相对定位 */
+        height: 100px; /* 高度为100像素 */
+        transform: translateY(100px); /* 在垂直方向平移100像素 */
+        display: flex; /* 定义弹性盒布局容器 */
+        justify-content: center; /* 在主轴方向上居中对齐内容 */
+        letter-spacing: 2px; /* 字母间距为2像素 */
+        align-items: center; /* 在交叉轴方向上居中对齐内容 */
+        text-align: center; /* 文本居中对齐 */
+        color: #323232; /* 字体颜色为#323232 */
+        font: 100 30px 'font'; /* 字体样式为：100字重、30像素大小、字体家族为 'font' */
+        background-color: #fba3c9; /* 背景颜色为 #D692AF */
+    }
