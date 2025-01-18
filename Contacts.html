@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUAN</title>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body .shell-main-nav ul .nav-box {
+            left: 480px;
+        }
+
+        .personal-intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 30px;
+            margin: 20px;
+        }
+
+        .contact-container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .contact-title {
+            color: #66cdaa;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+        }
+
+        .icons-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .icons-container li {
+            display: flex;
+            justify-content: center;
+        }
+
+        .icons-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .icons-container a:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        .icons-container img {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 15px;
+            filter: brightness(0.9);
+        }
+
+        .icons-container p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .icons-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .icons-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="shell-main">
+            <div class="shell-main-nav">
+                <div class="logo">
+                    <img src="./image/black-logo.png" alt="">
+                    <span>钻钻</span>
+                </div>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Works.html">Portfolio</a></li>
+                    <li><a href="./Resume.html">Resume</a></li>
+                    <li><a href="./Speciality.html">About</a></li>
+                    <li><a href="./Contacts.html">Contact</a></li>
+                    <div class="nav-box"></div>
+                </ul>
+            </div>
+
+            <div class="personal-intro">
+                <div class="contact-container">
+                    <h1 class="contact-title">Get in Touch</h1>
+                    <ul class="icons-container">
+                        <li>
+                            <a href="tel:+86 17623374471" onclick="copyToClipboard('+86 17623374471')">
+                                <img src="./image/icon/phone.png" alt="Phone">
+                                <p>+86 17623374471</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:mdwadobi80@gmail.com">
+                                <img src="./image/icon/gmail.png" alt="Email">
+                                <p>mdwadobi80@gmail.com</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ZuanZzz" target="_blank">
+                                <div style="width: 45px; height: 45px; background: #666666; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fab fa-github" style="font-size: 25px; color: white;"></i>
+                                </div>
+                                <p>@ZuanZzz</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/zuanzuan904" target="_blank">
+                                <img src="./image/icon/instagram.png" alt="Instagram">
+                                <p>@zuanzuan904</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="weixin://contacts/profile/ZUANZUAN_22" onclick="copyToClipboard('ZUANZUAN_22')">
+                                <img src="./image/icon/wechat.png" alt="WeChat">
+                                <p>ZUANZUAN_22</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tooltip = document.createElement('div');
+                tooltip.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(102, 205, 170, 0.9);
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    z-index: 1000;
+                    animation: fadeInOut 1.5s ease forwards;
+                `;
+                tooltip.textContent = 'Copied to clipboard!';
+                document.body.appendChild(tooltip);
+
+                setTimeout(() => tooltip.remove(), 1500);
+            });
+        }
+    </script>
+
+    <style>
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+        }
+    </style>
+</body>
+
+</html> 
